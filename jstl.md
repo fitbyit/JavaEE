@@ -271,3 +271,32 @@ SELECT * FROM users;
     </sql:update>
 </sql:transaction>
 ```
+
+
+# # 3. JSTL Functions Tag 
+
+### Usage
+
+```jsp
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+```
+
+In JSTL (JavaServer Pages Standard Tag Library), the `<fn:>` tag is part of the Function Library, providing various functions to manipulate data.
+
+| Function              | Description                                       | Example Usage                                |
+|-----------------------|---------------------------------------------------|----------------------------------------------|
+| `fn:concat`           | Concatenates two or more strings.                 | `<c:out value="${fn:concat('Hello, ', name)}"/>` |
+| `fn:length`           | Returns the length of a string or collection.     | `<c:out value="${fn:length(list)}"/>`      |
+| `fn:substring`        | Returns a substring of a string.                   | `<c:out value="${fn:substring(name, 0, 3)}"/>` |
+| `fn:toUpperCase`     | Converts a string to upper case.                   | `<c:out value="${fn:toUpperCase(name)}"/>` |
+| `fn:toLowerCase`     | Converts a string to lower case.                   | `<c:out value="${fn:toLowerCase(name)}"/>` |
+| `fn:trim`            | Removes leading and trailing whitespace from a string. | `<c:out value="${fn:trim(name)}"/>`      |
+| `fn:contains`         | Checks if a string contains a specified sequence.  | `<c:if test="${fn:contains(description, 'test')}">...</c:if>` |
+| `fn:startsWith`       | Checks if a string starts with a specified prefix. | `<c:if test="${fn:startsWith(name, 'A')}">...</c:if>` |
+| `fn:endsWith`         | Checks if a string ends with a specified suffix.   | `<c:if test="${fn:endsWith(name, 'son')}">...</c:if>` |
+| `fn:replace`          | Replaces occurrences of a substring within a string. | `<c:out value="${fn:replace(text, 'old', 'new')}"/>` |
+
+
+
+
+
