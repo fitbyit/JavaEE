@@ -37,3 +37,6 @@ Create a file named `index.jsp` with the following code inside body:
     <p>Server Info: <%= application.getServerInfo() %></p>
     <p>Servlet Context Path: <%= application.getContextPath() %></p>
 ```
+
+## Output
+![image](https://github.com/user-attachments/assets/1659652c-66f1-4b56-b795-8ade2cd879e6)
