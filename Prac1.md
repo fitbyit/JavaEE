@@ -40,4 +40,13 @@ else {
   out.println("<h1>Login failed</h1>");
   out.println("</body></html>");
 }
+```
+
+### Ouput
+![image](https://github.com/user-attachments/assets/73f529f8-f899-47d0-b678-4bbe089704ef)
+![image](https://github.com/user-attachments/assets/472ae60a-c89c-4fad-8620-306f16b3f409)
+![image](https://github.com/user-attachments/assets/86a83bb4-2a90-44a0-b3e6-77186a9fa594)
+
+
+
 
