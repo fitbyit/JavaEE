@@ -1,4 +1,4 @@
-# User Registration Servlet
+### 5. Create a servlet that accepts at least six user registration details and displays them on another page after submission.
 
 1. **Create the HTML File**: Create a file named `registration.html` and paste the HTML body code into it.
 
