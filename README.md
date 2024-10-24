@@ -9,6 +9,5 @@
 7. Create a JSP page to demonstrate the use of Expression language.
 8. Create a servlet application that functions as a basic calculator.
 9. Develop a servlet that demonstrates session creation and destruction. It should check if the user is visiting the page for the first time or if they have visited before, using session attributes.
-10. Develop a JSP application that uses JSTL Core Tags to iterate over a collection and display its elements.
-11. Create a JSP application to demonstrate the use of JSTL Tags.
-12. Write a servlet to store biodata details of a user into a database, including Name, Age, Address, Hobbies, Gender, and Qualification.
+10. Create a JSP application to demonstrate the use of JSTL Tags.
+11. Write a servlet to store biodata details of a user into a database, including Name, Age, Address, Hobbies, Gender, and Qualification.
