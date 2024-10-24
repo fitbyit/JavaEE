@@ -1,5 +1,10 @@
 # 1. Core Tag JSTL
- `<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>`
+### Usage
+
+```jsp
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/core" %>
+```
+
 
  | **Tag**         | **Attributes**                                                   | **Description**                                      |
 |------------------|-----------------------------------------------------------------|------------------------------------------------------|
@@ -91,8 +96,11 @@
 
 
 # 2. Formatting Tag JSTL
+### Usage
 
-`<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>`
+```jsp
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/fmt" %>
+```
 
 
 | **Tag**         | **Attributes**                                                   | **Description**                                      |
@@ -158,7 +166,12 @@
 
 
 # 3. JSTL SQL Tag Attributes
-`<%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>`
+
+### Usage
+
+```jsp
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/sql" %>
+```
 
 ## `<sql:query>`
 
