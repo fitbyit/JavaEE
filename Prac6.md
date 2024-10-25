@@ -3,7 +3,9 @@
  ###  Create the Servlet named as `visit.java` and make url-parrent as `/`
  
 <img src="https://github.com/user-attachments/assets/7c537c6b-877a-4f15-a1e3-55d5271a0450" alt="image" height="280" style="width:auto;">
+
 <img src="https://github.com/user-attachments/assets/0e5c932c-1a94-4994-8e31-9f4af517838a" alt="image" height="280" style="width:auto;">
+
 <img src="https://github.com/user-attachments/assets/dfe102c2-ba03-491f-9cfd-ad6a98bc210e" alt="image" height="280" style="width:auto;">
 
 ###  Write the below code inside `processRequest` Method
