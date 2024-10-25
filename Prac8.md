@@ -81,7 +81,7 @@ protected void processRequest(HttpServletRequest request, HttpServletResponse re
 }
 ```
 ### Output:
-<img src = "https://github.com/user-attachments/assets/6bc6da0e-8b9f-410c-865c-fc41045ee4da" heigth="280" width="auto">
-<img src = "https://github.com/user-attachments/assets/46f33cf3-76cf-47ff-b6ab-8f9f76b84645" heigth="280" width="auto">
+<img src = "https://github.com/user-attachments/assets/6bc6da0e-8b9f-410c-865c-fc41045ee4da" heigth="200" width="auto">
+<img src = "https://github.com/user-attachments/assets/46f33cf3-76cf-47ff-b6ab-8f9f76b84645" heigth="200" width="auto">
 
 
