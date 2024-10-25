@@ -1,4 +1,4 @@
-# T.Y.B.Sc. Information Technology - Enterprise Java Practical Questions
+# Enterprise Java
 
 1. Write a servlet that accepts a username and password from an HTML form. If the credentials are correct (e.g., username: "admin", password: "password"), display "Hello <username>". Otherwise, display "Login failed".
 2. Develop a JSP application that demonstrates the use of various implicit objects (like request, response, session, application).
