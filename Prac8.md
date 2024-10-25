@@ -26,7 +26,7 @@ Create a file named `index.html` your project:
 </html>
 ```
 
-### Create the Servlet `calculator`
+### Create the Servlet `calculator.java`
 write the below code inside `processRequest` Method
 
 ```java
