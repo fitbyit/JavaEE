@@ -1,3 +1,5 @@
+## 5. Develop a JSP application to allow the user to modify the registration details after the valid authentication. (Hint: Use JDBC to Connect Database)
+
 ### 1. **Create a Database:** Create a `table` to store user registration details.
 - Create Database
   
@@ -6,6 +8,10 @@
 - Create Table
 
 ![image](https://github.com/user-attachments/assets/c4530b91-12c8-40e2-be51-455b103a8235)
+
+- Insert Some Records Manually 
+![image](https://github.com/user-attachments/assets/6df414e1-c10c-446e-9bbe-523986697b43)
+
 
 
 ## Add the MySql J Connector.jar file in project
