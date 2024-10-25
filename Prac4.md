@@ -71,63 +71,96 @@
 ```jsp
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
-<%@ page session="true" %>
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Modify Registration Details</title>
+    <title>Update Details</title>
 </head>
 <body>
-    <h2>Modify Registration Details</h2>
-
+    
+    <h2>Modify User Details</h2>
     <%
         String username = (String) session.getAttribute("username");
         if (username == null) {
             response.sendRedirect("login.jsp");
             return;
         }
-
+        
         Connection conn = null;
         PreparedStatement stmt = null;
         ResultSet rs = null;
 
-        try {
+        String email = "";
+        String name = "";
+
+        try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/dbprac", "root", "");
-            stmt = conn.prepareStatement("SELECT * FROM users WHERE username = ?");
+            String sql = "SELECT * FROM userinfo WHERE username=?";
+            stmt = conn.prepareStatement(sql);
             stmt.setString(1, username);
             rs = stmt.executeQuery();
 
             if (rs.next()) {
-                String email = rs.getString("email");
-                String fullName = rs.getString("full_name");
-    %>
-                <form method="post">
-                    Email: <input type="text" name="email" value="<%= email %>"><br>
-                    Full Name: <input type="text" name="fullName" value="<%= fullName %>"><br>
-                    <input type="submit" value="Update">
-                </form>
-    <%
-            }
-
-            if (request.getMethod().equalsIgnoreCase("post")) {
-                String newEmail = request.getParameter("email");
-                String newFullName = request.getParameter("fullName");
-
-                stmt = conn.prepareStatement("UPDATE users SET email = ?, full_name = ? WHERE username = ?");
-                stmt.setString(1, newEmail);
-                stmt.setString(2, newFullName);
-                stmt.setString(3, username);
-                stmt.executeUpdate();
-                out.println("<p>Details updated successfully!</p>");
+                email = rs.getString("email");
+                name = rs.getString("full_name");
             }
         } catch (Exception e) {
-            out.println("<h1>Error: " + e.getMessage() + "</h1>");
-        } finally {
-            rs.close();
-            conn.close():
-          }
+            out.println("<h1> Error " + e.getMessage() + "</h1>");
+        }
+    %>
+    
+    <form method="post">
+        Email: <input type="email" name="email" value="<%= email %>" required /><br />
+        Name: <input type="text" name="name" value="<%= name %>" required /><br />
+        <input type="submit" value="Update" />
+    </form>
+    
+    <form method="post" action="logout.jsp">
+        <input type="submit" value="Logout" />
+    </form>
+
+    <%
+        String newEmail = request.getParameter("email");
+        String newName = request.getParameter("name");
+
+        if (newEmail != null && newName != null) {
+            try {
+                String sql = "UPDATE userinfo SET email=?, full_name=? WHERE username=?";
+                stmt = conn.prepareStatement(sql);
+                stmt.setString(1, newEmail);
+                stmt.setString(2, newName);
+                stmt.setString(3, username);
+                stmt.executeUpdate();
+                response.sendRedirect("updateSuccess.jsp");
+            } catch (Exception e) {
+                out.println("<h1> Error " + e.getMessage() + "</h1>");
+            }
+        }
     %>
 </body>
 </html>
 ```
+### 3. Create UpdateSucess Page `(updateSuccess.jsp)`
+```jsp
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<html>
+<head>
+    <title>Update Successful</title>
+</head>
+<body>
+    <h1>Your details have been updated successfully!</h1>
+    <a href="modify.jsp">Go back</a>
+</body>
+</html>
+```
+
+### 5. Create a Logout Page  `logout.jsp`
+```jsp
+<%@ page language="java" session="true" %>
+<%
+    session.invalidate(); // Invalidate the session
+    response.sendRedirect("login.jsp"); 
+%>
+```
+
+
